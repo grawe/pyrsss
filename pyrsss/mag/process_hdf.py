@@ -12,7 +12,7 @@ import numpy as NP
 import pandas as PD
 import scipy.signal
 
-from iaga2hdf import read_hdf, write_hdf
+from pyrsss.mag.iaga2hdf import read_hdf, write_hdf
 from ..util.nan import nan_interp
 from ..signal.lfilter import lp_fir_filter
 from ..stats.stats import despike

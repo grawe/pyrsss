@@ -215,7 +215,7 @@ def parse(fname, strict=True):
                 key = line[:24].strip().replace(' ', '_')
                 try:
                     header_map[key] = HEADER_TYPES[key](line[24:69].strip())
-                except ValueError, e:
+                except (ValueError, e):
                     logger.warning('could not parse header line {} --- skipping'.format(line))
                     header_map[key] = None
                     continue
@@ -238,7 +238,7 @@ def parse(fname, strict=True):
         for line in fid:
             try:
                 dt = datetime.strptime(line[:23], '%Y-%m-%d %H:%M:%S.%f')
-            except ValueError, e:
+            except (ValueError, e):
                 if strict:
                     raise e
                 else:

@@ -1,6 +1,7 @@
 from csv import reader
 from collections import namedtuple
-from cStringIO import StringIO
+#from cStringIO import StringIO
+from io import StringIO
 
 
 # MLAT and MLON are from IGRF 2010

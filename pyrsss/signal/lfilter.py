@@ -7,7 +7,8 @@ import numpy as NP
 import scipy as SP
 import scipy.signal
 
-from spectrum import nextpow2
+from pyrsss.signal.spectrum import nextpow2
+
 
 logger = logging.getLogger('pyrsss.signal.lfilter')
 

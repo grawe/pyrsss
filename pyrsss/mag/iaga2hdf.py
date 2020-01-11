@@ -14,7 +14,7 @@ from obspy.core.stream import Stream
 from obspy.core.utcdatetime import UTCDateTime
 from obspy.core.trace import Trace
 
-from iaga2002 import iaga2df
+from pyrsss.mag.iaga2002 import iaga2df
 from ..util.angle import deg2tenths_of_arcminute
 
 logger = logging.getLogger('pyrsss.mag.iaga2hdf')
