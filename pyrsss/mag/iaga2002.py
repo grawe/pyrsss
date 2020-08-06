@@ -354,9 +354,9 @@ def main(argv=None):
 
     header, data_map = parse(args.iaga2002_fname)
 
-    for key, value in header._asdict().iteritems():
+    for key, value in header._asdict().items():
         print('{} = {}'.format(key.replace(' ', '-'), value))
-    for dt, values in data_map.iteritems():
+    for dt, values in data_map.items():
         print('{:%Y-%m-%d %H:%M:%S.%f}:  {}  {}  {}  {}'.format(dt,
                                                                 values[1],
                                                                 values[2],

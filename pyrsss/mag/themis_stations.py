@@ -37,7 +37,7 @@ def get_station_info(info_url=INFO_URL, parse_map=PARSE_MAP):
                 station_info[key] = Info(**stn_data)
                 stn_data = {}
             line = line.lstrip()
-            for search_key, (key, convert) in parse_map.iteritems():
+            for search_key, (key, convert) in parse_map.items():
                 if line.startswith(search_key):
                     stn_data[key] = convert(line.split('"')[1])
     return station_info

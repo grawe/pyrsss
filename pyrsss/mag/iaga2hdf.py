@@ -257,7 +257,7 @@ def iaga2hdf(hdf_fname,
         header['geodetic_latitude'] = header.pop('Geodetic Latitude')
     if 'Geodetic Longitude' in header:
         header['geodetic_longitude'] = header.pop('Geodetic Longitude')
-    write_hdf(hdf_fname, df, key, {k.lower(): v for k, v in header.iteritems()})
+    write_hdf(hdf_fname, df, key, {k.lower(): v for k, v in header.items()})
     return hdf_fname
 
 

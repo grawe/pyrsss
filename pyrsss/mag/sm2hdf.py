@@ -41,7 +41,7 @@ def sm2hdf(hdf_fname, csv_fname):
                                   key='raw',
                                   mode='w')
     else:
-        for i, (stn, df_stn) in enumerate(df_map.iteritems()):
+        for i, (stn, df_stn) in enumerate(df_map.items()):
             df_stn.to_hdf(hdf_fname,
                           key='{}_raw'.format(stn),
                           mode='w' if i == 0 else 'a')
